@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">sample-app</string>
+
+    <!-- toobar -->
+    <string name="bar">ツールバー</string>
+
+    <!-- buttons -->
+    <string name="first_button">ボタン1</string>
+    <string name="second_button">ボタン2</string>
+    <string name="float_description">フロートボタンです</string>
+</resources>
