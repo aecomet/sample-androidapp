@@ -1,5 +1,6 @@
 package com.example.sample_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -73,7 +74,10 @@ public class MainActivity extends AppCompatActivity {
   private void createButtonEvent(Button button) {
     button.setOnClickListener(v -> viewModel.onButtonClick(button.getId()));
     viewModel.getButtonClickEvent(button.getId()).observe(this, id -> {
-      if (Objects.nonNull(id)) {
+      if (Objects.equals(id, R.id.first_button)) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+      } else {
         Toast.makeText(this, String.format("Button %s Clicked!", id), Toast.LENGTH_SHORT).show();
       }
     });
