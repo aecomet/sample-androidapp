@@ -8,4 +8,7 @@
     <string name="first_button">ボタン1</string>
     <string name="second_button">ボタン2</string>
     <string name="float_description">フロートボタンです</string>
+    <string name="fab_sub1">サブフロート1</string>
+    <string name="fab_sub2">サブフロート2</string>
+    <string name="fab_sub3">サブフロート3</string>
 </resources>
