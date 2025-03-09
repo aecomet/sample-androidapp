@@ -6,8 +6,8 @@
 
     <!-- Main Activity -->
     <!-- buttons -->
-    <string name="first_button">Change Screen with Activity</string>
-    <string name="second_button">ボタン2</string>
+    <string name="to_second">Move to SecondActivity</string>
+    <string name="to_third">Move to ThirdActivity</string>
     <string name="float_description">フロートボタンです</string>
     <string name="fab_sub1">サブフロート1</string>
     <string name="fab_sub2">サブフロート2</string>
@@ -17,4 +17,13 @@
     <string name="second_main_text">This is SecondActivity</string>
     <string name="second_return_button">Return to main</string>
 
+    <!-- Third Activity -->
+    <string name="third_main_text">This is ThirdActivity</string>
+    <string name="third_return_button">Return to main</string>
+
+    <!-- Third Fragment -->
+    <string name="third_parent_fragment_text">This is ThirdParentFragment</string>
+    <string name="third_child_fragment_text">This is ThirdChildFragment</string>
+    <string name="to_third_parent_fragment">To ThirdParentFragment</string>
+    <string name="to_third_child_fragment">To ThirdChildFragment</string>
 </resources>

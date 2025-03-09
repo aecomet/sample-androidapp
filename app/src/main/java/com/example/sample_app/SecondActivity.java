@@ -1,6 +1,7 @@
 package com.example.sample_app;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -14,6 +15,8 @@ public class SecondActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    Log.d("SecondActivity", "onCreate");
+
     EdgeToEdge.enable(this);
     setContentView(R.layout.activity_second);
 

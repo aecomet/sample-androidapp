@@ -2,6 +2,7 @@ package com.example.sample_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    Log.d("MainActivity", "onCreate");
+
     EdgeToEdge.enable(this);
     setContentView(R.layout.activity_main);
 
@@ -44,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
     // create button event
     List<Button> buttons = new ArrayList<>() {
       {
-        add(findViewById(R.id.first_button));
-        add(findViewById(R.id.second_button));
+        add(findViewById(R.id.to_second));
+        add(findViewById(R.id.to_third));
       }
     };
 
@@ -74,8 +77,11 @@ public class MainActivity extends AppCompatActivity {
   private void createButtonEvent(Button button) {
     button.setOnClickListener(v -> viewModel.onButtonClick(button.getId()));
     viewModel.getButtonClickEvent(button.getId()).observe(this, id -> {
-      if (Objects.equals(id, R.id.first_button)) {
+      if (Objects.equals(id, R.id.to_second)) {
         Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+      } else if (Objects.equals(id, R.id.to_third)) {
+        Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
       } else {
         Toast.makeText(this, String.format("Button %s Clicked!", id), Toast.LENGTH_SHORT).show();
